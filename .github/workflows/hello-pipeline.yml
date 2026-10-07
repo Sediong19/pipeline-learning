@@ -1,4 +1,4 @@
-name: My First CI Pipeline
+name: Build Pipeline
 
 on:
   push:
@@ -6,8 +6,16 @@ on:
       - main
 
 jobs:
-  say-hello:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - name: Print Welcome Message
-        run: echo "Hello Sediong! Your automated pipeline is officially running!"
+      - name: Get my code
+        uses: actions/checkout@v4
+
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Run my app
+        run: node app.js
