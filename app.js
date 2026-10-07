@@ -1,1 +1,2 @@
--econsole.log('App running successfully');\nconsole.log('Environment:Production');
+console.log('App running successfully');
+console.log('Environment: Production');
