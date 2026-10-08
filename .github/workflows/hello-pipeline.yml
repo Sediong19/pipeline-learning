@@ -19,3 +19,6 @@ jobs:
 
       - name: Run my app
         run: node app.js
+
+      - name: Run tests
+        run: node test.js
